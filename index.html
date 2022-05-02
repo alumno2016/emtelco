@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
+    <script src="https://d3js.org/d3-geo.v1.min.js"></script>
+    <script src="https://d3js.org/topojson.v2.min.js"></script>
+    <script
+    src="https://bl.ocks.org/mbostock/raw/7ea1dde508cec6d2d95306f92642bc42/6aac691494f752142a67cc43c51a0fd09896dbd4/versor.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="model.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <section>
+        <h1 id="title">
+            &US Company
+        </h1>
+    </section>
+
+    <h2 id="current"></h2>
+
+    <section>
+        <canvas id="globe"></canvas>
+        <canvas id="points"></canvas>    
+    </section>
+
+    <main id ="modal">
+        <article>
+            <div class="area-button"><button class="close-button" onclick="off()">X</button></div>
+            <div class="menu-h">
+                <nav>
+                    <ul>
+                        <li><a href="#bk1">Option1</a></li>
+                        <li><a href="#bk2">Option2</a></li>
+                        <li><a href="#bk3">Option3</a></li>
+                        <li><a href="#bk4">Option4</a></li>
+                        <li><a href="#bk5">Option5</a></li>
+                        <li><a href="#bk6">Option6</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </article>
+
+        
+        <section id="bk1" class="back1">
+            <div class="container-top">
+
+            </div>
+            <article class="container-data nw">
+                <p class="title nw">Title</p>
+            <div class="paragraph">
+                <div class="column">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos rem pariatur ex fugiat dicta unde placeat totam? Expedita quaerat dolore sunt labore debitis non, recusandae aliquid repudiandae! Dolorum, officia omnis?</div>
+                <div class="column">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam cum nesciunt reprehenderit dolor dolores at autem, sunt architecto error veritatis vel facere. Error tempora sequi impedit ipsa facere dolor suscipit?</div>
+            </div>
+            <div class="paragraph">
+                <div class="column">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi qui vitae sit eos ex magni ipsum. Fugit totam vitae nesciunt laudantium non cumque sint at voluptatem est, adipisci enim iste velit, unde ducimus. Eaque, pariatur harum! Nostrum provident assumenda magnam et tempora. Exercitationem magnam vero nihil, aspernatur sapiente nulla minus.</div>
+                <div class="column">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque sunt sint illo libero fuga quisquam, numquam repudiandae harum provident, eos est laboriosam fugit unde, earum deleniti voluptatum animi odio culpa atque ducimus modi dolor natus consectetur. Officia ea veniam deserunt quis tenetur? Earum, repellendus veniam! Soluta aspernatur maxime dolorum similique!</div>
+            </div>
+            </article>
+        </section>
+        <section id="bk2" class="back2">
+            <div class="halfl-container container-color">
+                <p class="title nw">Title</p>
+                <div class="paragraph nw">
+                    <div class="column1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime autem quas optio! Illum, quaerat explicabo. Mollitia quo reiciendis animi eum ex sint officia dicta quaerat sapiente nam beatae quos vel sequi modi, debitis consequatur obcaecati delectus expedita est adipisci eaque? Inventore illum qui vero, officiis nisi doloremque aliquid maiores expedita quidem quod illo laborum animi ad accusamus enim rerum commodi quasi iusto labore similique? Laboriosam accusamus magnam pariatur. Aperiam nulla incidunt numquam ipsum. Deserunt vitae veritatis omnis quisquam, atque sit maxime voluptate consectetur eligendi harum quae nisi necessitatibus error autem magnam nam eos possimus nostrum, dicta blanditiis aliquid! Non, qui?</div>
+                    <div class="column1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, quibusdam. Assumenda iure facilis suscipit quaerat non earum, atque iste pariatur, error, necessitatibus consequuntur consequatur temporibus nostrum aut odio quia quam odit amet quisquam recusandae unde ab cumque. Modi minima, accusantium obcaecati cumque quidem quisquam accusamus a soluta! Reiciendis minima sint minus ad ex? Voluptate error, quod et ea commodi eaque natus, nihil repellendus saepe veniam fuga ipsam corporis labore inventore qui tempore velit quam voluptatem sequi incidunt mollitia omnis culpa. Laboriosam totam minus temporibus similique possimus cupiditate dicta iure eveniet vero quas nemo porro, voluptatem commodi recusandae, explicabo ab consequuntur?</div>
+                </div>
+                <div class="paragraph nw">
+                    <div class="column1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime autem quas optio! Illum, quaerat explicabo. Mollitia quo reiciendis animi eum ex sint officia dicta quaerat sapiente nam beatae quos vel sequi modi, debitis consequatur obcaecati delectus expedita est adipisci eaque? Inventore illum qui vero, officiis nisi doloremque aliquid maiores expedita quidem quod illo laborum animi ad accusamus enim rerum commodi quasi iusto labore similique? Laboriosam accusamus magnam pariatur. Aperiam nulla incidunt numquam ipsum. Deserunt vitae veritatis omnis quisquam, atque sit maxime voluptate consectetur eligendi harum quae nisi necessitatibus error autem magnam nam eos possimus nostrum, dicta blanditiis aliquid! Non, qui?</div>
+                    <div class="column1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, quibusdam. Assumenda iure facilis suscipit quaerat non earum, atque iste pariatur, error, necessitatibus consequuntur consequatur temporibus nostrum aut odio quia quam odit amet quisquam recusandae unde ab cumque. Modi minima, accusantium obcaecati cumque quidem quisquam accusamus a soluta! Reiciendis minima sint minus ad ex? Voluptate error, quod et ea commodi eaque natus, nihil repellendus saepe veniam fuga ipsam corporis labore inventore qui tempore velit quam voluptatem sequi incidunt mollitia omnis culpa. Laboriosam totam minus temporibus similique possimus cupiditate dicta iure eveniet vero quas nemo porro, voluptatem commodi recusandae, explicabo ab consequuntur?</div>
+                </div>
+            </div>
+            <div class="halfr-container">
+               
+            </div>
+        </section>
+        <section id="bk3" class="back3">
+            <article class="container-data">
+                <div class="container-top">
+                    <canvas id="c"></canvas>
+                </div>
+                <p class="title nw">Title</p>
+                <div class="paragraph nw">
+                    <div class="column">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos rem pariatur ex fugiat dicta unde placeat totam? Expedita quaerat dolore sunt labore debitis non, recusandae aliquid repudiandae! Dolorum, officia omnis?</div>
+                    <div class="column">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam cum nesciunt reprehenderit dolor dolores at autem, sunt architecto error veritatis vel facere. Error tempora sequi impedit ipsa facere dolor suscipit?</div>
+                </div>
+                <div class="paragraph nw">
+                    <div class="column">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime autem quas optio! Illum, quaerat explicabo. Mollitia quo reiciendis animi eum ex sint officia dicta quaerat sapiente nam beatae quos vel sequi modi, debitis consequatur obcaecati delectus expedita est adipisci eaque? Inventore illum qui vero, officiis nisi doloremque aliquid maiores expedita quidem quod illo laborum animi ad accusamus enim rerum commodi quasi iusto labore similique? Laboriosam accusamus magnam pariatur. Aperiam nulla incidunt numquam ipsum. Deserunt vitae veritatis omnis quisquam, atque sit maxime voluptate consectetur eligendi harum quae nisi necessitatibus error autem magnam nam eos possimus nostrum, dicta blanditiis aliquid! Non, qui?</div>
+                    <div class="column">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, quibusdam. Assumenda iure facilis suscipit quaerat non earum, atque iste pariatur, error, necessitatibus consequuntur consequatur temporibus nostrum aut odio quia quam odit amet quisquam recusandae unde ab cumque. Modi minima, accusantium obcaecati cumque quidem quisquam accusamus a soluta! Reiciendis minima sint minus ad ex? Voluptate error, quod et ea commodi eaque natus, nihil repellendus saepe veniam fuga ipsam corporis labore inventore qui tempore velit quam voluptatem sequi incidunt mollitia omnis culpa. Laboriosam totam minus temporibus similique possimus cupiditate dicta iure eveniet vero quas nemo porro, voluptatem commodi recusandae, explicabo ab consequuntur?</div>
+                </div>
+            </article>
+        </section>
+        <section id="bk4" class="back4">
+            <div class="quarterl-container container-color">
+                <div>
+                    <div class="container">
+                        <div id="cube">
+                          <figure class="back">
+                            <p class="bottom-paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit maxime adipisci aspernatur eaque possimus debitis error delectus perferendis dolores ut omnis, quaerat quo beatae, cumque, magnam impedit quod molestias itaque ad voluptatem. Ipsum quidem dolore consequatur commodi repellendus quibusdam molestias sunt. Iusto vel illum tenetur doloribus incidunt dignissimos, eligendi voluptate.</p>
+                          </figure>
+                          <figure class="left">
+                            <p class="bottom-paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit maxime adipisci aspernatur eaque possimus debitis error delectus perferendis dolores ut omnis, quaerat quo beatae, cumque, magnam impedit quod molestias itaque ad voluptatem. Ipsum quidem dolore consequatur commodi repellendus quibusdam molestias sunt. Iusto vel illum tenetur doloribus incidunt dignissimos, eligendi voluptate.</p>
+                          </figure>
+                          <!-- <figure class="bottom">bottom</figure> -->
+                          <figure class="front">
+                              <p class="bottom-paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit maxime adipisci aspernatur eaque possimus debitis error delectus perferendis dolores ut omnis, quaerat quo beatae, cumque, magnam impedit quod molestias itaque ad voluptatem. Ipsum quidem dolore consequatur commodi repellendus quibusdam molestias sunt. Iusto vel illum tenetur doloribus incidunt dignissimos, eligendi voluptate.</p>
+                          </figure>
+                          <figure class="right">
+                            <p class="bottom-paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit maxime adipisci aspernatur eaque possimus debitis error delectus perferendis dolores ut omnis, quaerat quo beatae, cumque, magnam impedit quod molestias itaque ad voluptatem. Ipsum quidem dolore consequatur commodi repellendus quibusdam molestias sunt. Iusto vel illum tenetur doloribus incidunt dignissimos, eligendi voluptate.</p>
+                          </figure>
+                         <!--  <figure class="top">top</figure> -->
+                        </div>
+                      </div>
+                      <div class="buttons">
+                        <!-- <div class="button" id="up">▲</div> -->
+                        <div class="button" id="left">◄</div>
+                       <!--  <div class="button" id="bottom">▼</div> -->
+                        <div class="button" id="right">►</div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="quarterr-container">
+                <p class="title">Title</p>
+                <div class="paragraph">
+                    <div class="column">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi qui vitae sit eos ex magni ipsum. Fugit totam vitae nesciunt laudantium non cumque sint at voluptatem est, adipisci enim iste velit, unde ducimus. Eaque, pariatur harum! Nostrum provident assumenda magnam et tempora. Exercitationem magnam vero nihil, aspernatur sapiente nulla minus.</div>
+                    <div class="column">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi qui vitae sit eos ex magni ipsum. Fugit totam vitae nesciunt laudantium non cumque sint at voluptatem est, adipisci enim iste velit, unde ducimus. Eaque, pariatur harum! Nostrum provident assumenda magnam et tempora. Exercitationem magnam vero nihil, aspernatur sapiente nulla minus.</div>
+                </div>
+                <div class="paragraph">
+                    <div class="column">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi qui vitae sit eos ex magni ipsum. Fugit totam vitae nesciunt laudantium non cumque sint at voluptatem est, adipisci enim iste velit, unde ducimus. Eaque, pariatur harum! Nostrum provident assumenda magnam et tempora. Exercitationem magnam vero nihil, aspernatur sapiente nulla minus.</div>
+                    <div class="column">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi qui vitae sit eos ex magni ipsum. Fugit totam vitae nesciunt laudantium non cumque sint at voluptatem est, adipisci enim iste velit, unde ducimus. Eaque, pariatur harum! Nostrum provident assumenda magnam et tempora. Exercitationem magnam vero nihil, aspernatur sapiente nulla minus.</div>
+                </div>
+                <div class="paragraph">
+                    <div style="position: relative;">
+                        <iframe class="diagram" src="//jsfiddle.net/jicc87/7penkwL3/embedded/result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="bk5" class="back5">
+            <div class="container-top">
+            </div>
+            <p class="title">Title</p>
+            <div class="paragraph">
+                <div class="column">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos rem pariatur ex fugiat dicta unde placeat totam? Expedita quaerat dolore sunt labore debitis non, recusandae aliquid repudiandae! Dolorum, officia omnis?</div>
+                <div class="column">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam cum nesciunt reprehenderit dolor dolores at autem, sunt architecto error veritatis vel facere. Error tempora sequi impedit ipsa facere dolor suscipit?</div>
+            </div>
+            <div class="paragraph">
+                <div class="column">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi qui vitae sit eos ex magni ipsum. Fugit totam vitae nesciunt laudantium non cumque sint at voluptatem est, adipisci enim iste velit, unde ducimus. Eaque, pariatur harum! Nostrum provident assumenda magnam et tempora. Exercitationem magnam vero nihil, aspernatur sapiente nulla minus.</div>
+                <div class="column">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque sunt sint illo libero fuga quisquam, numquam repudiandae harum provident, eos est laboriosam fugit unde, earum deleniti voluptatum animi odio culpa atque ducimus modi dolor natus consectetur. Officia ea veniam deserunt quis tenetur? Earum, repellendus veniam! Soluta aspernatur maxime dolorum similique!</div>
+            </div>
+        </section>
+        <section id="bk6" class="back6">
+           <div class="halfl-container">
+            <iframe class="iframe" src="map.html" frameborder="0"></iframe>
+           </div>
+            <div class="halfr-container">
+              <p class="title">Title</p>
+              <div class="paragraph">
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, culpa doloremque nisi, nobis eius assumenda laborum perferendis harum officiis aperiam facere cum illo natus pariatur omnis placeat quos minus. Dolorum minus accusantium enim, iusto laboriosam incidunt voluptatum quasi expedita non delectus vero repellendus fugit repellat obcaecati illo rerum totam corrupti!
+              </div>
+              <div class="paragraph nw">
+                  <div class="column">
+                    <label style="width: 100%;" for="">Name:</label>
+                    <input style="width: 100%;" type="text">
+                    <label for="">SurName</label>
+                    <input type="text">
+                    <label for="">eMail:</label>
+                    <input type="email">
+                    <label for="">Phone:</label>
+                    <input type="number">
+                  </div>
+              </div>
+              <div class="paragraph nw">
+                 <div class="margin-t">
+                    <label for="">Message:</label>
+                    <textarea name="" id="" cols="30" rows="30"></textarea>
+                 </div>
+              </div>
+            </div>
+        </section>
+
+
+    </main>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+    <script src="https://r105.threejsfundamentals.org/threejs/resources/threejs/r105/three.min.js"></script>
+    <script src="https://r105.threejsfundamentals.org/threejs/resources/threejs/r105/js/controls/OrbitControls.js"></script>
+    <script src="https://r105.threejsfundamentals.org/threejs/resources/threejs/r105/js/loaders/LoaderSupport.js"></script>
+    <script src="https://r105.threejsfundamentals.org/threejs/resources/threejs/r105/js/loaders/OBJLoader2.js"></script>
+    <script src="https://r105.threejsfundamentals.org/threejs/resources/threejs/r105/js/loaders/MTLLoader.js"></script>
+</body>
+
+
+</html>

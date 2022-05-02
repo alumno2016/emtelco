@@ -1,0 +1,407 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+
+*, html, body{
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  font-family: "Questrial";
+  font-size: 1rem;
+}
+
+html{
+  font-size: calc(60% + 0.8vmin);
+}
+
+#globe {
+  cursor: pointer;
+  stroke: white;
+  stroke-width: 0.25px;
+ 
+}
+
+#current {
+  width: 100%;
+  position: absolute;
+  color: midnightblue;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+#title {
+  text-align: center;
+  font-size: 10vh;
+  background: linear-gradient(to right, gray 10%, yellowgreen 90%);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#modal{
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(127, 255, 0.25, 0.2);
+  border: 1px solid #fff;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  overflow: auto;
+  z-index: 2;
+}
+
+nav{
+  position: fixed;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+nav ul{
+  background-color: rgba(173, 255, 47, 0.5);
+  color: #000;
+}
+
+ul{
+  margin: auto;
+}
+
+ul > li{
+  padding: 1rem 1rem;
+  list-style: none;
+  display: inline-block;
+}
+
+ul > li > a{
+  padding: 1rem 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: #000;
+   transition: all 0.5s 0s ease, all 0.8s 0s ease;
+	-webkit-transition: all 0.8s 0s ease, all 0.8s 0s ease;
+	-moz-transition: all 0.8s 0s ease, all 0.8s 0s ease;
+	-o-transition: all 0.8s 0s ease, all 0.8s 0s ease;
+}
+
+li > a:hover{
+  color: rgba(0,0,0,0.2);
+  font-size: 1.5rem;
+}
+
+
+.text-b{
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.area-button{
+  position: fixed;
+  width: 2.5rem;
+  height: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  right: 0;
+  z-index: 4;
+}
+
+.close-button{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.2);
+  color: greenyellow;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.close-button:hover{
+  background-color: #000;
+  transition: all 1s linear;
+}
+
+/* Background */
+
+.back1, .back2, .back3, .back4, .back5, .back6{
+  position: relative;
+  opacity: 0.9;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.back1{
+  background-image: url('https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849825_960_720.jpg');
+}
+
+.back2{
+  background-image: url('https://cdn.pixabay.com/photo/2016/10/09/08/32/digital-marketing-1725340_960_720.jpg');
+}
+
+.back3{
+ /*  background-image: url('https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849821_960_720.jpg'); */
+ background-image: url('https://cdn.pixabay.com/photo/2014/02/06/10/43/road-259815_960_720.jpg');
+}
+
+.back4{
+  background-image: url('https://cdn.pixabay.com/photo/2019/03/26/04/30/influencer-4081842_960_720.jpg');
+}
+
+.back5{
+  background-image: url('https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849822_960_720.jpg');
+}
+
+.back6{
+  background-image: url('https://cdn.pixabay.com/photo/2021/02/09/20/45/architecture-5999913_960_720.jpg');
+}
+
+.container-data{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+  background-color: rgba(0,0,0,0.2);
+  animation-name: example;
+  animation-duration: 4s;
+}
+
+.container-top{
+  width: 100%; 
+  height: 48%;
+  margin-bottom: 1rem;
+}
+
+@keyframes example {
+  from {background-color: black;}
+  to {background-color: rgb(0, 102, 255);}
+}
+
+#c{
+  width: 100%;
+  height: 100%;
+  display: inline-block
+}
+
+.title{
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 3rem;
+  color: #000;
+}
+
+.row{
+  width: 100%; 
+  height: 48%; 
+  background-color: aqua; 
+  display: inline-block
+}
+
+.column{
+  margin-left: 1rem;
+  padding: 0.5rem;
+  display: inline-block; 
+  width: 46%;
+}
+
+.column1{
+  margin-left: 1rem;
+  margin-right: 3rem;
+  padding: 0.5rem;
+  display: inline-block;
+  text-align: justify;
+  width: 94%;
+}
+
+.paragraph{
+  width: 100%; 
+  padding: 0rem;
+}
+
+.container-color{
+  background-color: rgba(0,0,0,0.4);
+  color: #fff;
+  font-weight: bold;
+}
+
+.quarterl-container{
+  float: left;
+  width: 30%;
+  height: 100%;
+}
+
+.quarterr-container{
+  float: right;
+  width: 70%;
+  height: 100%;
+}
+
+.halfl-container{
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+
+.halfr-container{
+  float: right;
+  width: 50%;
+  height: 100%;
+}
+
+.nw{
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Cube */
+
+#cube{
+	width: 30%;
+	height: 90%;
+	position: absolute;
+	transform-style: preserve-3d;
+	transition: transform 1s;
+}
+
+#cube figure{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	/* border: 1px solid red; */
+	position: absolute;
+}
+
+#cube .back{
+  background-image: url('https://cdn.pixabay.com/photo/2015/01/09/11/08/startup-594090_960_720.jpg');
+	/* background: #dd6e42; */
+	transform: rotateX(0deg) translateZ(-200px);
+
+	}
+
+#cube .left{
+  background-image: url('https://cdn.pixabay.com/photo/2020/03/06/08/00/laptop-4906312_960_720.jpg');
+/* 	background: #4f6d7a; */
+	transform: rotateY(90deg) translateZ(-200px);
+
+}
+
+/* #cube .bottom{
+	background: #eaeaea;
+	transform: rotateX(90deg) translateZ(-200px);
+} */
+
+#cube .front{
+  background-image: url('https://cdn.pixabay.com/photo/2018/03/10/12/00/teamwork-3213924_960_720.jpg');
+	/* background: #b75b37; */
+	transform: rotateX(0deg) translateZ(200px);
+}
+
+#cube .right{
+  background-image: url('https://cdn.pixabay.com/photo/2020/07/08/04/12/work-5382501_960_720.jpg');
+	/* background: #88a2ad; */
+	transform: rotateY(90deg) translateZ(200px);
+}
+
+/* #cube .top{
+	background: #ececec;
+	transform: rotateX(90deg) translateZ(200px);
+} */
+
+.buttons{
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	margin: 0 auto;	
+  bottom: 5%;
+  left: 13%;
+}
+
+.button{
+	position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+/* #bottom{
+	top: 35px;
+} */
+
+#left{
+	top: 35px;
+	left: -35px;
+}
+
+#right{
+	top: 35px;
+	left: 0px;
+}
+
+.bottom-paragraph{
+  position: absolute; 
+  bottom: 0; text-align: 
+  justify; color: #fff; 
+  font-weight: 800; 
+  background-color: rgba(0,0,0,0.8); 
+  padding: 2rem 0.5rem; 
+  line-height: 1.5rem;
+}
+
+.iframe{
+  width: 100%;
+  height: 100%;
+}
+
+label, input{
+  padding: 1rem;
+  width: 100%;
+  height: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+}
+
+input{
+  margin-top: 0.5rem;
+}
+
+textarea{
+  width: 100%;
+  height: 14rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+}
+
+.margin-t{
+  padding-left: 1rem;
+  padding-right: 2rem;
+}
+
+.diagram{
+  position: absolute; 
+  top: 0;
+  bottom: 0;
+  height: 500px;
+  width: 90%;
+}
+
+@media screen and (max-width: 1000px){
+  #modal .menu-h{
+    display: none;
+  }
+}

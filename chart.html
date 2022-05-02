@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+                #myChart {
+            position: relative;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+</head>
+
+<body>
+
+    <canvas id="myChart"></canvas>
+
+    <script>
+        var ctx = document.getElementById("myChart").getContext('2d');
+        a = [1, 2, 3, 4, 67, 5, 20, 12, 45, 8]
+        const unomas = a.map(function (cdata) {
+            return cdata * 2;
+        });
+
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ["Tokyo", "Mumbai", "Mexico City", "Shanghai", "Sao Paulo", "New York", "Karachi", "Buenos Aires", "Delhi", "Moscow"],
+                datasets: [{
+                    label: 'Series 1',
+                    data: unomas, 
+                    fill: false,
+                    borderColor: '#2196f3',
+                    backgroundColor: '#2196f3',
+                    borderWidth: 1 
+                }]
+            },
+            options: {
+                responsive: true, 
+                maintainAspectRatio: false, 
+            }
+        });
+    </script>
+</body>
+
+</html>
